@@ -1,0 +1,47 @@
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-card {
+    margin-top: 10%;
+}
+
+.mat-form-field {
+    width: 100%;
+    min-width: 275px;
+}
+
+.card-footer-logo {
+max-width: 70%;
+max-height: 70%;
+}
+
+mat-card-title,
+mat-card-content,
+mat-toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+.submitButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.linkForgotPassword {
+    a {
+        color: orange;
+    }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.alertChip {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

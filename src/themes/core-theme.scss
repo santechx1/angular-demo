@@ -1,0 +1,9 @@
+$core-theme-primary: mat-palette($mat-grey, 700, 500, 900);
+$core-theme-accent:  mat-palette($mat-orange, A400, A200, A700);
+$core-theme-warn:  mat-palette($mat-red);
+
+$core-theme: mat-light-theme(
+    $core-theme-primary, 
+    $core-theme-accent, 
+    $core-theme-warn
+);

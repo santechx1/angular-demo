@@ -1,0 +1,104 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  md-1: 800px,
+  lg: 992px,
+  xl: 1200px
+);
+mat-tree {
+  padding-top: 5px;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+mat-tree-node {
+  min-height: inherit;
+  .container {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 5px;
+    .expansion-icon {
+      width: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      mat-icon {
+        color: gray;
+        font-size: 14px;
+        height: inherit;
+        width: inherit;
+      }
+    }
+    i {
+      font-size: 1.75em;
+      vertical-align: sub;
+      width: 30px;
+    }
+    a {
+      text-decoration: none;
+    }
+    span {
+      margin-left: 10px;
+      color: gray;
+      font-size: 14px;
+    }
+    background-position: center;
+    transition: background 0.2s ease-in-out;
+    &:hover {
+      background: whitesmoke radial-gradient(circle, transparent 1%, #f9f9f9 1%) center/15000%;
+    }
+    &:active {
+      background-color: whitesmoke;
+      background-size: 100%;
+      transition: background 0s;
+    }
+    &.selected {
+      background-color: whitesmoke;
+    }
+    &:focus {
+      outline-width: 0;
+    }
+  }
+  &.expanded {
+    background-color: #f9f9f9;
+  }
+  // &.leaf {
+  //   min-height: 24px;
+  // }
+}
+
+@media (max-width: map-get($grid-breakpoints, md-1)) {
+  #user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px;
+    img {
+      max-width: 50%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  mat-tree-node {
+    .container {
+      padding: 10px;
+      span {
+        margin-left: 10px;
+        color: gray;
+        font-size: 15px;
+      }
+      i {
+        font-size: 2em;
+        width: 40px;
+      }
+    }
+  }
+}

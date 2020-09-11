@@ -1,0 +1,75 @@
+:host {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid {
+   
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url('../../../../../assets/media/img/bg/bg-0.jpg') no-repeat center top;
+        background-size: cover;
+        opacity: 0.7;
+        content: '';
+        z-index: 0;
+      }
+}
+
+.session-expired-card {
+    width: 275px;
+    height: 377px;
+    margin-top: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.session-expired-div {
+    display: flex;
+    justify-content: center;
+    min-width: 275px;
+}
+
+.session-expired-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    
+}
+
+.card-footer-logo {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+mat-card-title {
+    display: flex;
+    justify-content: center;
+}
+
+mat-card-content,
+mat-toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+mat-card-content {
+    margin-bottom: 165px;
+    margin-top: 80px;
+}
+
+mat-toolbar {
+    position: absolute;
+    bottom: 0;
+}
+  
+  
+
+
+

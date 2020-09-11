@@ -1,0 +1,73 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="control" class="noselect">
+  <mat-tree-node
+    *matTreeNodeDef="let node; when: hasChild"
+    matTreeNodePadding
+    [matTreeNodePaddingIndent]="30"
+    [ngClass]="{ expanded: control.isExpanded(node) }"
+  >
+    <div class="container" matTreeNodeToggle>
+      <div class="expansion-icon">
+        <mat-icon translate="no" class="mat-icon-rtl-mirror">
+          {{ control.isExpanded(node) ? "expand_less" : "expand_more" }}
+        </mat-icon>
+      </div>
+      <i
+        translate="no"
+        *ngIf="node.type === ResourceType.Application"
+        class="fas fa-cog fa-2x fa-gray"
+      ></i>
+      <i
+        translate="no"
+        *ngIf="node.type === ResourceType.Module1"
+        class="fas fa-users fa-2x fa-gray"
+      ></i>
+      <i
+        translate="no"
+        *ngIf="node.type === ResourceType.Module2"
+        class="fas fa-money-bill-alt fa-2x fa-gray"
+      ></i>
+      <span>{{ node.name }}</span>
+    </div>
+  </mat-tree-node>
+  <mat-tree-node *matTreeNodeDef="let node; when: isRoot" class="root-leaf">
+    <div
+      class="container"
+      [ngClass]="{ selected: selection.isSelected(node) }"
+      (click)="selection.select(node)"
+      [routerLink]="[node.route]"
+    >
+      <div class="expansion-icon"></div>
+      <i
+        translate="no"
+        *ngIf="node.type === ResourceType.Application"
+        class="fas fa-cog fa-2x fa-gray"
+      ></i>
+      <i
+        translate="no"
+        *ngIf="node.type === ResourceType.Module1"
+        class="fas fa-users fa-2x fa-gray"
+      ></i>
+      <i
+        translate="no"
+        *ngIf="node.type === ResourceType.Module2"
+        class="fas fa-money-bill-alt fa-2x fa-gray"
+      ></i>
+      <span>{{ node.name }}</span>
+    </div>
+  </mat-tree-node>
+  <mat-tree-node
+    *matTreeNodeDef="let node"
+    matTreeNodePadding
+    [matTreeNodePaddingIndent]="mobile ? 65 : 55"
+    class="leaf"
+  >
+    <div
+      class="container"
+      [ngClass]="{ selected: selection.isSelected(node) }"
+      (click)="selection.select(node)"
+      [routerLink]="[node.route]"
+    >
+      <span>{{ node.name }}</span>
+    </div>
+  </mat-tree-node>
+</mat-tree>

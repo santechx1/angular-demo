@@ -1,0 +1,15 @@
+mat-form-field{
+    width:100%;
+}
+
+.select-panel{
+    .mat-optgroup-label{
+        font-size: 12px !important;
+        line-height:2em !important;
+        height:2em !important;
+    }
+    .mat-option{
+        line-height:2.5em !important;
+        height:2.5em !important;
+    }
+}

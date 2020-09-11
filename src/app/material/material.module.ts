@@ -1,0 +1,75 @@
+import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
+import {
+  MatDialogModule,
+  MatInputModule,
+  MatCardModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatListModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatTooltipModule,
+  MatChipsModule,
+  MatProgressBarModule,
+  MatTableModule,
+  MatExpansionModule,
+  MatCheckboxModule,
+  MatStepperModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatTreeModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatRadioModule,
+  MatSliderModule,
+  MatTabsModule,
+  MatDividerModule,
+  MatProgressSpinnerModule
+} from '@angular/material';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { MdePopoverModule } from '@material-extended/mde';
+
+@NgModule({
+  exports: [
+    MatDialogModule,
+    LayoutModule,
+    MatInputModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatProgressBarModule,
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatTooltipModule,
+    MatChipsModule,
+    MatTableModule,
+    MatExpansionModule,
+    CdkTableModule,
+    MatCheckboxModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTreeModule,
+    CdkTreeModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSliderModule,
+    MatTabsModule,
+    MatDividerModule,
+    MatProgressSpinnerModule,
+    MdePopoverModule
+  ],
+})
+export class MaterialModule { }

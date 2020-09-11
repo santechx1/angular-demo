@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dashboard-img {
+  display: flex;
+  margin: auto;
+  width: 33%;
+  height: -webkit-fill-available;
+}
+.dashboard_message {
+  color: red;
+  align-self: center;
+}

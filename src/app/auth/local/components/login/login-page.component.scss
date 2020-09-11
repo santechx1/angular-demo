@@ -1,0 +1,19 @@
+:host {
+    height: 100%;
+}
+
+.container-fluid {
+   
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url('../../../../../assets/media/img/bg/bg-0.jpg') no-repeat center top;
+        background-size: cover;
+        opacity: 0.7;
+        content: '';
+        z-index: 0;
+      }
+}

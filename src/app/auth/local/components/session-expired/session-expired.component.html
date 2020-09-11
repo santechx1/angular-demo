@@ -1,0 +1,27 @@
+<div class="container-fluid app-theme">
+  <mat-card class="session-expired-card mat-elevation-z8">
+    <mat-card-title>Sesión Expirada!</mat-card-title>
+    <mat-card-content>
+      <div class="session-expired-div">
+        <p>
+          Su sesión ha expirado!
+        </p>
+      </div>
+      <div class="session-expired-div">
+        <p>
+          Por favor inicie sesión nuevamente.
+        </p>
+      </div>
+      <div class="session-expired-button">
+        <button mat-raised-button color="primary" (click)="redirect()">
+          <mat-icon class="material-icons md-light" translate="no">done</mat-icon>
+        </button>
+      </div>
+    </mat-card-content>
+    <mat-card-footer class="mat-elevation-z8">
+      <mat-toolbar class="mat-elevation-z8">
+        <img class="card-footer-logo" src="./assets/media/img/logos/logo-0.png"  alt="prosupply-logo"/>
+      </mat-toolbar>
+    </mat-card-footer>
+  </mat-card>
+</div>

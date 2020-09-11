@@ -1,0 +1,10 @@
+<div class="root">
+    <div class="dashboard_message" *ngIf="(menu$ | async)?.length === 0">
+        <p>
+            Este usuario no cuenta con permisos para ninguna funcionalidad presente en esta aplicación, por favor
+            contactese con el administrador de su institución
+        </p>
+    </div>
+    <img class="dashboard-img" src="./assets/media/img/bg/intro.svg" alt="logo"/>
+
+</div>

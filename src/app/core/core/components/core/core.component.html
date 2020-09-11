@@ -1,0 +1,37 @@
+<mat-drawer-container autosize class="core-theme mat-typography">
+  <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches">
+    <app-side-menu [mobile]="mobileQuery.matches" (onselect)="mobileQuery.matches && drawer.close()"></app-side-menu>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="wrapper">
+      <!-- INICIO Header -->
+      <mat-toolbar class="mat-elevation-z4" color="primary">
+        <div id="div_logo">
+          <button mat-icon-button *ngIf="mobileQuery.matches" (click)="drawer.toggle()">
+            <i translate="no" class="material-icons md-24">menu</i>
+          </button>
+          <img id="img_logo" src="./assets/media/img/logos/logo-2.png" routerLink="/c" alt="logo"/>
+        </div>
+        <div class="user-options">
+          <small>{{(user$ | async)?.userName}}</small>
+          <button mat-icon-button [matMenuTriggerFor]="toolbarUserMenu">
+            <mat-icon class="notranslate" translate="no">person</mat-icon>
+          </button>
+          <mat-menu class="user-menu" #toolbarUserMenu="matMenu">
+            <button mat-menu-item (click)="logout()">
+              <mat-icon translate="no">exit_to_app</mat-icon>
+              <span>Cerrar sesión</span>
+            </button>
+          </mat-menu>
+        </div>
+      </mat-toolbar>
+      <!-- FIN Header -->
+      <!-- INICIO Content -->
+      <div class="content" color="primary">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- FIN Content -->
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
